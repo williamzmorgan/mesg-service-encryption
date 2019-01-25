@@ -1,5 +1,6 @@
 name: "Encrypt & Decrypt"
 sid: encrypt
+repository: https://github.com/antho1404/mesg-service-encryption
 tasks:
   encrypt:
     inputs:
