@@ -5,7 +5,7 @@
 ## Contents
 
 - [Installation](#Installation)
-  - [MESG Engine](#MESG-Engine)
+  - [MESG Engine](#MESG-Core)
   - [Deploy the Service](#Service)
 - [Definitions](#Definitions)
   - [Tasks](#Tasks)
@@ -17,7 +17,7 @@
 
 ### MESG Engine
 
-This service requires [MESG Engine](https://github.com/mesg-foundation/engine) to be installed first.
+This service requires [MESG Engine](https://github.com/mesg-foundation/core) to be installed first.
 
 You can install MESG Engine by running the following command or [follow the installation guide](https://docs.mesg.com/guide/start-here/installation.html).
 
@@ -34,7 +34,7 @@ To deploy this service, go to [this service page](https://marketplace.mesg.com/s
 
 ### Tasks
 
-#### encrypt
+<h4 id="encrypt">encrypt</h4>
 
 Task key: `encrypt`
 
@@ -49,16 +49,10 @@ Task key: `encrypt`
   
 ##### Outputs
 
-###### encryptedData
-
-Output key: `encryptedData`
-
-
-
 | **Name** | **Key** | **Type** | **Description** |
 | --- | --- | --- | --- |
-
-#### decrypt
+| **encryptedData** | `encryptedData` | `String` |  |
+<h4 id="decrypt">decrypt</h4>
 
 Task key: `decrypt`
 
@@ -74,16 +68,10 @@ Task key: `decrypt`
   
 ##### Outputs
 
-###### data
-
-Output key: `data`
-
-
-
 | **Name** | **Key** | **Type** | **Description** |
 | --- | --- | --- | --- |
-
-#### generate
+| **data** | `data` | `String` |  |
+<h4 id="generate">generate</h4>
 
 Task key: `generate`
 
@@ -97,22 +85,8 @@ Task key: `generate`
   
 ##### Outputs
 
-###### publicKey
-
-Output key: `publicKey`
-
-
-
 | **Name** | **Key** | **Type** | **Description** |
 | --- | --- | --- | --- |
-
-###### privateKey
-
-Output key: `privateKey`
-
-
-
-| **Name** | **Key** | **Type** | **Description** |
-| --- | --- | --- | --- |
-
+| **publicKey** | `publicKey` | `String` |  |
+| **privateKey** | `privateKey` | `String` |  |
 
