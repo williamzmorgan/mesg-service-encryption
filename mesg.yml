@@ -9,14 +9,8 @@ tasks:
       data:
         type: String
     outputs:
-      success:
-        data:
-          encryptedData:
-            type: String
-      error:
-        data:
-          message:
-            type: String
+      encryptedData:
+        type: String
   decrypt:
     inputs:
       privateKey:
@@ -26,26 +20,14 @@ tasks:
       encryptedData:
         type: String
     outputs:
-      success:
-        data:
-          data:
-            type: String
-      error:
-        data:
-          message:
-            type: String
+      data:
+        type: String
   generate:
     inputs:
       passphrase:
         type: String
     outputs:
-      success:
-        data:
-          publicKey:
-            type: String
-          privateKey:
-            type: String
-      error:
-        data:
-          message:
-            type: String
+      publicKey:
+        type: String
+      privateKey:
+        type: String

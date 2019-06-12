@@ -1,147 +1,118 @@
-# Encrypt & Decrypt
+# Encrypt &amp; Decrypt (ID: encrypt)
 
 
 
-# Contents
+## Contents
 
 - [Installation](#Installation)
+  - [MESG Engine](#MESG-Engine)
+  - [Deploy the Service](#Service)
 - [Definitions](#Definitions)
-  
   - [Tasks](#Tasks)
-    - [decrypt](#decrypt)
     - [encrypt](#encrypt)
+    - [decrypt](#decrypt)
     - [generate](#generate)
 
-# Installation
+## Installation
 
-## MESG Core
+### MESG Engine
 
-This service requires [MESG Core](https://github.com/mesg-foundation/core) to be installed first.
+This service requires [MESG Engine](https://github.com/mesg-foundation/engine) to be installed first.
 
-You can install MESG Core by running the following command or [follow the installation guide](https://docs.mesg.com/guide/start-here/installation.html).
+You can install MESG Engine by running the following command or [follow the installation guide](https://docs.mesg.com/guide/start-here/installation.html).
 
 ```bash
 bash <(curl -fsSL https://mesg.com/install)
 ```
 
-## Service
+### Deploy the Service
 
-To deploy this service, run the following command:
-```bash
-mesg-core service deploy https://github.com/antho1404/mesg-service-encryption
-```
+To deploy this service, go to [this service page](https://marketplace.mesg.com/services/encrypt) on the [MESG Marketplace](https://marketplace.mesg.com) and click the button "get/buy this service".
 
-# Definitions
+## Definitions
 
 
-# Tasks
+### Tasks
 
-## decrypt
-
-Task key: `decrypt`
-
-
-
-### Inputs
-
-| **Name** | **Key** | **Type** | **Description** |
-| --- | --- | --- | --- |
-| **encryptedData** | `encryptedData` | `String` |  |
-| **passphrase** | `passphrase` | `String` |  |
-| **privateKey** | `privateKey` | `String` |  |
-
-### Outputs
-
-#### error
-
-Output key: `error`
-
-
-
-| **Name** | **Key** | **Type** | **Description** |
-| --- | --- | --- | --- |
-| **message** | `message` | `String` |  |
-
-#### success
-
-Output key: `success`
-
-
-
-| **Name** | **Key** | **Type** | **Description** |
-| --- | --- | --- | --- |
-| **data** | `data` | `String` |  |
-
-
-## encrypt
+#### encrypt
 
 Task key: `encrypt`
 
 
 
-### Inputs
+##### Inputs
 
 | **Name** | **Key** | **Type** | **Description** |
 | --- | --- | --- | --- |
-| **data** | `data` | `String` |  |
 | **publicKey** | `publicKey` | `String` |  |
+| **data** | `data` | `String` |  |
+  
+##### Outputs
 
-### Outputs
+###### encryptedData
 
-#### error
-
-Output key: `error`
-
-
-
-| **Name** | **Key** | **Type** | **Description** |
-| --- | --- | --- | --- |
-| **message** | `message` | `String` |  |
-
-#### success
-
-Output key: `success`
+Output key: `encryptedData`
 
 
 
 | **Name** | **Key** | **Type** | **Description** |
 | --- | --- | --- | --- |
+
+#### decrypt
+
+Task key: `decrypt`
+
+
+
+##### Inputs
+
+| **Name** | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **privateKey** | `privateKey` | `String` |  |
+| **passphrase** | `passphrase` | `String` |  |
 | **encryptedData** | `encryptedData` | `String` |  |
+  
+##### Outputs
+
+###### data
+
+Output key: `data`
 
 
-## generate
+
+| **Name** | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
+
+#### generate
 
 Task key: `generate`
 
 
 
-### Inputs
+##### Inputs
 
 | **Name** | **Key** | **Type** | **Description** |
 | --- | --- | --- | --- |
 | **passphrase** | `passphrase` | `String` |  |
+  
+##### Outputs
 
-### Outputs
+###### publicKey
 
-#### error
-
-Output key: `error`
-
-
-
-| **Name** | **Key** | **Type** | **Description** |
-| --- | --- | --- | --- |
-| **message** | `message` | `String` |  |
-
-#### success
-
-Output key: `success`
+Output key: `publicKey`
 
 
 
 | **Name** | **Key** | **Type** | **Description** |
 | --- | --- | --- | --- |
-| **privateKey** | `privateKey` | `String` |  |
-| **publicKey** | `publicKey` | `String` |  |
+
+###### privateKey
+
+Output key: `privateKey`
+
+
+
+| **Name** | **Key** | **Type** | **Description** |
+| --- | --- | --- | --- |
 
 
