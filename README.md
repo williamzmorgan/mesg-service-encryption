@@ -5,7 +5,7 @@
 ## Contents
 
 - [Installation](#Installation)
-  - [MESG Engine](#MESG-Core)
+  - [MESG SDK](#MESG-SDK)
   - [Deploy the Service](#Service)
 - [Definitions](#Definitions)
   - [Tasks](#Tasks)
@@ -15,14 +15,14 @@
 
 ## Installation
 
-### MESG Engine
+### MESG SDK
 
-This service requires [MESG Engine](https://github.com/mesg-foundation/core) to be installed first.
+This service requires [MESG SDK](https://github.com/mesg-foundation/engine) to be installed first.
 
-You can install MESG Engine by running the following command or [follow the installation guide](https://docs.mesg.com/guide/start-here/installation.html).
+You can install MESG SDK by running the following command or [follow the installation guide](https://docs.mesg.com/guide/start-here/installation.html).
 
 ```bash
-bash <(curl -fsSL https://mesg.com/install)
+npm install -g mesg-cli
 ```
 
 ### Deploy the Service
