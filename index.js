@@ -1,4 +1,5 @@
-const MESG = require('mesg-js').service()
+const Service = require('@mesg/service')
+const MESG = new Service()
 
 MESG.listenTask({
   encrypt: require('./tasks/encrypt'),
